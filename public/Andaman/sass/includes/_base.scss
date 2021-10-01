@@ -1,0 +1,20 @@
+.font-base {
+	font-family: 'Conv_HelveticaLTStd-LightCond';
+}
+/*.font-light {
+	font-family: 'Conv_HelveticaLTStd-Light';
+}
+.font-bold {
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+}
+.font-awesome {
+	font-family: 'FontAwesome';
+}*/
+
+html {height: 100%;}
+
+body {
+  @extend .font-base;
+	font-size: $font-size-base;
+	height: 100%;
+}
