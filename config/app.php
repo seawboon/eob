@@ -110,6 +110,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Available locales
+    |--------------------------------------------------------------------------
+    |
+    | List all locales that your application works with
+    |
+    */
+
+    'available_locales' => [
+      'English' => 'en',
+      'Chinese' => 'cn',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Encryption Key
     |--------------------------------------------------------------------------
     |
@@ -174,6 +188,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Spatie\Permission\PermissionServiceProvider::class,
 
     ],
 

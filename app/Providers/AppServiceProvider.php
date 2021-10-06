@@ -21,8 +21,11 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-        //
-    }
+     public function boot()
+     {
+         view()->composer('layouts.language_switcher', function ($view) {
+             $view->with('current_locale', app()->getLocale());
+             $view->with('available_locales', config('app.available_locales'));
+         });
+     }
 }
