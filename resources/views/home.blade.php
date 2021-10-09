@@ -15,7 +15,19 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <table>
+                      @foreach($posts as $post)
+                        <tr>
+                          <td>
+                            {{$post->title}}
+                          </td>
+                          <td class="p-4">
+                            {{$post->content}}
+                          </td>
+                        </tr>
+                      @endforeach
+                    </table>
+
                 </div>
             </div>
         </div>

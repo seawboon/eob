@@ -63,6 +63,14 @@
                     </a>
                 </li>
                 @endcan
+                @can('post-list')
+                <li>
+                    <a href="{{route('posts.index')}}">
+                        <i class="metismenu-icon pe-7s-display2"></i>
+                        Posts
+                    </a>
+                </li>
+                @endcan
                 <li class="app-sidebar__heading">Widgets</li>
                 <li>
                     <a href="dashboard-boxes.html">

@@ -1,42 +1,46 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Post;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use App\Models\Post;
+use App\Http\Requests\StorePostRequest;
+
 
 class PostController extends Controller
 {
     function __construct()
     {
-         $this->middleware('permission:post-list|post-create|post-edit|post-delete', ['only' => ['index', 'show']]);
-         $this->middleware('permission:post-create', ['only' => ['create', 'store']]);
-         $this->middleware('permission:post-edit', ['only' => ['edit', 'update']]);
+         $this->middleware('permission:post-list|post-create|post-edit|post-delete', ['only' => ['index','store']]);
+         $this->middleware('permission:post-create', ['only' => ['create','store']]);
+         $this->middleware('permission:post-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:post-delete', ['only' => ['destroy']]);
     }
 
     public function index(Request $request)
     {
+        App::setLocale('en');
         $data = Post::latest()->paginate(5);
 
-        return view('posts.index',compact('data'));
+        return view('admin.posts.index',compact('data'));
     }
 
     public function create()
     {
-        return view('posts.create');
+        return view('admin.posts.create');
     }
 
-
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        $this->validate($request, [
+        /*$this->validate($request, [
             'title' => 'required',
             'body' => 'required',
         ]);
-        $input = $request->except(['_token']);
+        $input = $request->except(['_token']);*/
 
-        Post::create($input);
+        Post::create($request->validated());
 
         return redirect()->route('posts.index')
             ->with('success','Post created successfully.');
@@ -46,26 +50,27 @@ class PostController extends Controller
     {
         $post = Post::find($id);
 
-        return view('posts.show', compact('post'));
+        return view('admin.posts.show', compact('post'));
     }
 
     public function edit($id)
     {
         $post = Post::find($id);
 
-        return view('posts.edit',compact('post'));
+
+        return view('admin.posts.edit',compact('post'));
     }
 
-    public function update(Request $request, $id)
+    public function update(StorePostRequest $request, $id)
     {
         $this->validate($request, [
             'title' => 'required',
-            'body' => 'required',
+            'content' => 'required',
         ]);
 
         $post = Post::find($id);
 
-        $post->update($request->all());
+        $post->update($request->validated());
 
         return redirect()->route('posts.index')
             ->with('success', 'Post updated successfully.');
@@ -78,4 +83,5 @@ class PostController extends Controller
         return redirect()->route('posts.index')
             ->with('success', 'Post deleted successfully.');
     }
+
 }
