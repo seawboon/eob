@@ -24,6 +24,9 @@
                           <td class="p-4">
                             {{$post->content}}
                           </td>
+                          <td>
+                            <img src="{{$post->getFirstMediaUrl('avatar', 'thumb')}}" / width="120px">
+                          </td>
                         </tr>
                       @endforeach
                     </table>

@@ -20,7 +20,7 @@
                 </span>
             </div>
             <div class="card-body">
-                {!! Form::open(array('route' => 'posts.store', 'method'=>'POST')) !!}
+                {!! Form::open(array('route' => 'posts.store', 'method'=>'POST', 'enctype'=>'multipart/form-data')) !!}
                     {{-- <div class="form-group">
                         <strong>Title:</strong>
                         {!! Form::text('title', null, array('placeholder' => 'Title','class' => 'form-control')) !!}
@@ -30,7 +30,11 @@
                         {!! Form::textarea('body', null, array('placeholder' => 'Body','class' => 'form-control')) !!}
                     </div>
                     --}}
-
+                    <div class="mb-3">
+                        <label>Image:</label>
+                        <input type="file" name="avatar" class="form-control">
+                    </div>
+                    
                     <input type="hidden" name="author" id="author" value="{{ Auth::user()->name }}" />
 
                     @foreach(config('translatable.locales') as $locale)

@@ -39,8 +39,12 @@ class PostController extends Controller
             'body' => 'required',
         ]);
         $input = $request->except(['_token']);*/
+        //dd($request->all());
+        $post = Post::create($request->validated());
 
-        Post::create($request->validated());
+        if($request->hasFile('avatar') && $request->file('avatar')->isValid()){
+            $post->addMediaFromRequest('avatar')->toMediaCollection('avatar');
+        }
 
         return redirect()->route('posts.index')
             ->with('success','Post created successfully.');
