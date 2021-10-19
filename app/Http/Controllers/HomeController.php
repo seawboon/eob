@@ -14,4 +14,8 @@ class HomeController extends Controller
         $posts = Post::all();
         return view('home', compact('posts'));
     }
+
+    public function showPost(Post $slug) {
+      return $slug->content;
+    }
 }

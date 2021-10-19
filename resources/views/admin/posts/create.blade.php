@@ -34,7 +34,7 @@
                         <label>Image:</label>
                         <input type="file" name="avatar" class="form-control">
                     </div>
-                    
+
                     <input type="hidden" name="author" id="author" value="{{ Auth::user()->name }}" />
 
                     @foreach(config('translatable.locales') as $locale)

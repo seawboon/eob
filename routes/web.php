@@ -39,6 +39,8 @@ Route::get('language/{locale}', function ($locale) {
 Route::redirect('/', '/home', 301);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+Route::get('/posts/{slug}', [HomeController::class, 'showPost'])->name('post.show');
+
 //Route::redirect('/login', '/admin/login', 301);
 
 Route::group(['prefix' => 'admin'], function() {
