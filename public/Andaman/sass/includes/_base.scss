@@ -1,20 +1,48 @@
 .font-base {
-	font-family: 'Conv_HelveticaLTStd-LightCond';
+	font-family: 'Frutiger';
 }
-/*.font-light {
-	font-family: 'Conv_HelveticaLTStd-Light';
+
+.frutige45 {
+	font-family: 'Frutiger LT 45';
 }
-.font-bold {
-	font-family: 'Conv_HelveticaLTStd-BoldCond';
+
+.frutige65 {
+	font-family: 'Frutiger 45';
 }
-.font-awesome {
-	font-family: 'FontAwesome';
-}*/
 
 html {height: 100%;}
 
 body {
   @extend .font-base;
 	font-size: $font-size-base;
+	color: $darkblue;
 	height: 100%;
+}
+
+.banner {
+	height: 100vh;
+	background-image: url('../imgs/banner.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	h1 {
+		@extend .frutige65;
+		color: $darkgreen;
+	}
+}
+
+.sec-two {
+	background-color: #fff;
+	h2 {
+		@extend .frutige65;
+		color: $darkblue;
+	}
+}
+
+.sec-map {
+	background-color: $mapbg;
+	h3{
+		font-size: 24px;
+	}
 }

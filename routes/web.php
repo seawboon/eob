@@ -52,6 +52,8 @@ Route::group(['prefix' => 'admin'], function() {
     ]);
 });
 
+Route::get('posts-index', [HomeController::class, 'postIndex']);
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', [AdminController::class, 'index'])->name('admin.home');
     Route::resource('users', UserController::class);

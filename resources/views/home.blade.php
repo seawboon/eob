@@ -4,7 +4,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+
             @include('layouts/language_switcher')
+
+            <example-component></example-component>
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 {{ __('home.welcome') }}
@@ -18,6 +21,9 @@
                     <table>
                       @foreach($posts as $post)
                         <tr>
+                          <td>
+                            {{$post->id}}
+                          </td>
                           <td>
                             {{$post->title}}
                           </td>

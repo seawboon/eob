@@ -1,23 +1,35 @@
 @font-face {
-	font-family: 'Conv_HelveticaLTStd-LightCond';
-	src: url('fonts/HelveticaLTStd-LightCond.eot');
-	src: local('☺'), url('fonts/HelveticaLTStd-LightCond.woff') format('woff'), url('fonts/HelveticaLTStd-LightCond.ttf') format('truetype'), url('fonts/HelveticaLTStd-LightCond.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Frutiger';
+    src: url('Frutiger-Roman.eot');
+    src: url('fonts/Frutiger-Roman.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Frutiger-Roman.woff2') format('woff2'),
+        url('fonts/Frutiger-Roman.woff') format('woff'),
+        url('fonts/Frutiger-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-	font-family: 'Conv_HelveticaLTStd-Light';
-	src: url('fonts/HelveticaLTStd-Light.eot');
-	src: local('☺'), url('fonts/HelveticaLTStd-Light.woff') format('woff'), url('fonts/HelveticaLTStd-Light.ttf') format('truetype'), url('fonts/HelveticaLTStd-Light.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Frutiger LT 45';
+    src: url('fonts/FrutigerLT-Light.eot');
+    src: url('fonts/FrutigerLT-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/FrutigerLT-Light.woff2') format('woff2'),
+        url('fonts/FrutigerLT-Light.woff') format('woff'),
+        url('fonts/FrutigerLT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-	font-family: 'Conv_HelveticaLTStd-BoldCond';
-	src: url('fonts/HelveticaLTStd-BoldCond.eot');
-	src: local('☺'), url('fonts/HelveticaLTStd-BoldCond.woff') format('woff'), url('fonts/HelveticaLTStd-BoldCond.ttf') format('truetype'), url('fonts/HelveticaLTStd-BoldCond.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Frutiger 45';
+    src: url('fonts/Frutiger-Bold.eot');
+    src: url('fonts/Frutiger-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Frutiger-Bold.woff2') format('woff2'),
+        url('fonts/Frutiger-Bold.woff') format('woff'),
+        url('fonts/Frutiger-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
