@@ -10,6 +10,7 @@
     <title>Andaman</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/starter-template/">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="css/app.css" rel="stylesheet">
 </head>
 
@@ -73,13 +74,31 @@
       </div>
     </section>
 
+    <section class="sec-events">
+      <div class="events">
+        <div><img src="imgs/events/1.png" /></div>
+        <div>your content</div>
+        <div>your content</div>
+      </div>
+    </section>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/fitty.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        fitty('.fit', {
-            minSize: 1
+        fitty('.fit', { minSize: 1 });
+        $(document).ready(function(){
+          $('.events').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true
+          });
         });
     </script>
+
 </body>
 
 </html>
