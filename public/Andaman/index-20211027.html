@@ -11,7 +11,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/starter-template/">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link href="css/app.css" rel="stylesheet">
+    <link href="css/app.css?v=2" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" />
 </head>
 
 <body>
@@ -75,20 +76,41 @@
     </section>
 
     <section class="sec-events">
-      <div class="events">
-        <div><img src="imgs/events/1.png" /></div>
-        <div>your content</div>
-        <div>your content</div>
+      <div class="events py-4">
+        <div class="mx-2 position-relative event-item">
+          <img src="imgs/events/1.png" />
+          <span class="caption">Shopping</span>
+        </div>
+        <div class="mx-2 position-relative event-item"><img src="imgs/events/2.png" /><span class="caption">Residential</span></div>
+        <div class="mx-2 position-relative event-item"><img src="imgs/events/3.png" /><span class="caption">Education</span></div>
+        <div class="mx-2 position-relative event-item"><img src="imgs/events/4.png" /><span class="caption">Healtg & Wellness</span></div>
+        <div class="mx-2 position-relative event-item"><img src="imgs/events/5.png" /><span class="caption">Work</span></div>
       </div>
     </section>
 
+    <section class="sec-slider">
+      sdfasdfas
+    </section>
+
+    <section class="sec-contact">
+      sdfasdfas
+    </section>
+
+    <footer>
+      asdad
+    </footer>
+
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/fitty.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js"></script>
     <script>
         fitty('.fit', { minSize: 1 });
         $(document).ready(function(){
           $('.events').slick({
+            arrows: false,
             dots: false,
             infinite: true,
             speed: 300,

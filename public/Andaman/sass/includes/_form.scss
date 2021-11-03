@@ -1,0 +1,19 @@
+.form-control.is-valid:focus,
+.was-validated :valid.form-control {
+    border-color: inherit !important;
+    background-image: inherit !important;
+    box-shadow: inherit !important;
+}
+
+.form-check-input.is-valid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
+    color: inherit !important;
+}
+
+.form-check-input.is-valid, .was-validated .form-check-input:valid {
+    border-color: inherit !important;
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  background-image: inherit !important;
+}

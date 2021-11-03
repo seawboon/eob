@@ -10,30 +10,56 @@
 	font-family: 'Frutiger 45';
 }
 
-html {height: 100%;}
+html {
+	height: 100%;
+}
 
 body {
-  @extend .font-base;
+	@extend .font-base;
 	font-size: $font-size-base;
 	color: $darkblue;
 	height: 100%;
+	position: relative;
 }
 
 .banner {
 	height: 100vh;
-	background-image: url('../imgs/banner.jpg');
+	background-image: url("../imgs/Hero_image.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 
 	h1 {
 		@extend .frutige65;
-		color: $darkgreen;
+		color: #fff;
+	}
+
+	.banner-btn-wrp {
+		position: absolute;
+		bottom: 5%;
+		left: 0;
+		right: 0;
+
+		a.btn-outline-primary {
+			text-transform: uppercase;
+			border-radius: 0;
+			border: solid 1px #fff;
+			color: #fff;
+			font-size: 14px;
+			padding: 0.75rem 2.25rem;
+
+			&:hover, &:focus {
+				background-color: transparent;
+				outline: 0;
+				box-shadow: none;
+			}
+		}
 	}
 }
 
 .sec-two {
 	background-color: #fff;
+
 	h2 {
 		@extend .frutige65;
 		color: $darkblue;
@@ -42,7 +68,142 @@ body {
 
 .sec-map {
 	background-color: $mapbg;
-	h3{
+
+	h3 {
 		font-size: 24px;
+	}
+}
+
+.sec-events {
+	.events {
+		.event-item {
+			span.caption {
+				@extend .frutige65;
+				color: $white;
+				font-size: 24px;
+				display: block;
+				position: absolute;
+				bottom: 4px;
+				left: 14px;
+				z-index: 251;
+			}
+		}
+
+		.event-item:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(109, 110, 113, 0) 77.08%, #2C3D53 100%);
+			z-index: 250;
+		}
+	}
+}
+
+.sec-slider {
+	background-color: $sliderbg;
+}
+
+.sec-contact {
+	h2 {
+		@extend .frutige65;
+		font-size: 2.25rem;
+		line-height: 2.813rem;
+	}
+
+	p {
+		margin-bottom: 1.5rem;
+	}
+
+	#andaman_form {
+		.row {
+			.col-12, .col-6 {
+				margin-bottom: 1.5rem;
+			}
+		}
+		input::placeholder {
+			/* Chrome, Firefox, Opera, Safari 10.1+ */
+			text-transform: uppercase;
+			opacity: 0.5;
+		}
+
+		label {
+			text-transform: uppercase;
+			&.form-check-label {
+				text-transform: none;
+				font-size: 0.875rem;
+				a {
+					text-decoration: none;
+				}
+			}
+		}
+
+		.form-control {
+			border-radius: 0;
+			border: solid 1px #6D6E71;
+			padding: 12px 16px;
+		}
+
+		.form-control, .form-check-input {
+			outline: 0;
+			box-shadow: none;
+		}
+
+		.iti, .country-select {
+			display: block;
+		}
+
+		.iti--allow-dropdown input,
+		.iti--allow-dropdown input[type=tel],
+		.iti--allow-dropdown input[type=text],
+		.iti--separate-dial-code input,
+		.iti--separate-dial-code input[type=tel],
+		.iti--separate-dial-code input[type=text] {
+			padding-left: 52px;
+		}
+
+		.country-select.inside input, .country-select.inside input[type=text] {
+		    padding-left: 52px;
+		}
+
+		.btn-outline-dark {
+			text-transform: uppercase;
+			border-radius: 0;
+			padding: 0.75rem 2.25rem;
+
+			&:hover, &:focus {
+				background-color: transparent;
+				color: inherit;
+				outline: 0;
+				box-shadow: none;
+			}
+		}
+
+	}
+}
+
+footer {
+	background-color: $footerbg;
+	border-top: 1px solid #6D6E71;
+	margin-top: 4rem;
+	font-size: 14px;
+
+	a, .nav-link {
+		text-decoration: none;
+		color: $darkblue;
+		&:hover {
+			color: $darkblue;
+		}
+	}
+
+	.social-nav {
+		font-size: 26px;
+		.nav-link {
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+		}
 	}
 }
